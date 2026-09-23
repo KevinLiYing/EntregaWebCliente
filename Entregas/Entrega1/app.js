@@ -1,11 +1,12 @@
 const secreto = Math.floor(Math.random() * 100) + 1;
-console.log("(psst... el secreto es", secreto, "— quita esta línea al acabar)");
 
 const intento = document.querySelector("#intento");
-const probar = document.querySelector("#probar");
+const boton = document.querySelector("#probar");
 const respuesta = document.querySelector("#respuesta");
+const marcador = document.querySelector("#marcador");
+let intentos = 0;
 
-probar.addEventListener("click", () => {
+boton.addEventListener("click", () => {
 	const numeroRecibido = Number(intento.value);
 
 	if (intento.value === "" || Number.isNaN(numeroRecibido) || numeroRecibido < 1 || numeroRecibido > 100) {
@@ -13,8 +14,12 @@ probar.addEventListener("click", () => {
 		return;
 	}
 
+	intentos += 1;
+	marcador.textContent = `Intentos: ${intentos}`;
+
 	if (numeroRecibido === secreto) {
-		respuesta.textContent = "¡Correcto!";
+		respuesta.textContent = `Correcto. Lo has conseguido en ${intentos} intentos.`;
+		boton.disabled = true;
 	} else if (numeroRecibido < secreto) {
 		respuesta.textContent = "Mi número es mayor";
 	} else {
