@@ -1,7 +1,11 @@
 let saldoActual = 500;
 let apuestaConfirmada = 0;
+let victorias = 0;
+let dineroObtenido = 0;
 
 const saldo = document.querySelector("#saldo");
+const contadorVictorias = document.querySelector("#victorias");
+const contadorDinero = document.querySelector("#dinero-obtenido");
 const apuesta = document.querySelector("#apuesta");
 const confirmarApuesta = document.querySelector("#confirmar-apuesta");
 const eleccion = document.querySelector("#eleccion");
@@ -39,10 +43,14 @@ jugar.addEventListener("click", () => {
 		return;
 	}
 
-    // comprobacion resultado
+    // comprobacion resultado solo añadir el dinero obtenido no el perdido
 	const hasAcertado = resultado === eleccion.value;
 	if (hasAcertado) {
 		saldoActual += apuestaConfirmada;
+		victorias += 1;
+		dineroObtenido += apuestaConfirmada;
+		contadorVictorias.textContent = victorias;
+		contadorDinero.textContent = `${dineroObtenido.toFixed(2).replace(".", ",")} €`;
 	} else {
 		saldoActual -= apuestaConfirmada;
 	}
