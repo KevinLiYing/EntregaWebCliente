@@ -1,1 +1,1 @@
-Innit repo
+Innit repository
