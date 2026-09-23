@@ -1,12 +1,12 @@
 :root {
-	color-scheme: light;
-	--ink: #17221d;
-	--muted: #66736b;
-	--paper: #f4f0e8;
-	--panel: #fffdf8;
-	--green: #245c4a;
-	--green-dark: #173e32;
-	--line: #d9d4c8;
+	color-scheme: dark;
+	--ink: #edf3ee;
+	--muted: #a9b8b0;
+	--paper: #101918;
+	--panel: #1a2926;
+	--green: #3d8a6c;
+	--green-dark: #2d6c54;
+	--line: #3b514a;
 	--accent: #e5a344;
 }
 
@@ -17,7 +17,7 @@
 body {
 	min-height: 100vh;
 	margin: 0;
-	background: radial-gradient(circle at 20% 10%, #dce7d6 0, transparent 32%), var(--paper);
+	background: radial-gradient(circle at 20% 10%, #24453a 0, transparent 32%), var(--paper);
 	color: var(--ink);
 	font-family: Georgia, "Times New Roman", serif;
 }
@@ -74,7 +74,7 @@ h2 {
 	border: 1px solid var(--line);
 	border-top: 5px solid var(--green);
 	background: var(--panel);
-	box-shadow: 12px 12px 0 rgba(36, 92, 74, 0.1);
+	box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.24);
 }
 
 .saldo {
@@ -117,7 +117,7 @@ select {
 	width: 100%;
 	padding: 12px 0;
 	border: 0;
-	background: transparent;
+	background: #14211f;
 	color: var(--ink);
 	font: inherit;
 	font-size: 1.2rem;
@@ -141,7 +141,7 @@ button {
 	padding: 14px 18px;
 	border: 0;
 	background: var(--green);
-	color: #fffdf8;
+	color: #f4faf5;
 	cursor: pointer;
 	font-family: Arial, sans-serif;
 	font-size: 0.95rem;
@@ -161,8 +161,8 @@ button:disabled {
 	min-height: 48px;
 	margin: 26px 0 0;
 	padding: 14px;
-	background: #f1eadb;
-	color: var(--green-dark);
+	background: #203b32;
+	color: #dcebe1;
 	font-size: 1rem;
 	line-height: 1.45;
 }

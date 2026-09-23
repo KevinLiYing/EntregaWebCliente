@@ -22,7 +22,8 @@ confirmarApuesta.addEventListener("click", () => {
 		return;
 	}
 
-    if(saldoActual < -100){
+    // esta no es una validación incorrecta, es muy importante
+    if(saldoActual < -500){
             mensaje.textContent = "No te queda dinero para darnos.";
             return;
         }
