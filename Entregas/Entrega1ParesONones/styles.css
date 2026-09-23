@@ -99,6 +99,10 @@ label {
 	font-size: 1.5rem;
 }
 
+.saldo strong.saldo-negativo {
+	color: #ff6b6b;
+}
+
 label {
 	display: block;
 	margin: 20px 0 8px;

@@ -56,6 +56,7 @@ jugar.addEventListener("click", () => {
 		saldoActual -= apuestaConfirmada;
 	}
 	saldo.textContent = `${saldoActual.toFixed(2).replace(".", ",")} €`;
+	saldo.classList.toggle("saldo-negativo", saldoActual < 0);
 
     // reset
 	mensaje.textContent = `Tu dado: ${dadoJugador}. Dado de la casa: ${dadoCasa}. Suma: ${suma}. Resultado: ${resultado}. ${hasAcertado ? "Has ganado" : "Has perdido"} ${apuestaConfirmada.toFixed(2)} €.`;
