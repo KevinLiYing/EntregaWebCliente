@@ -1,5 +1,6 @@
 let secreto = Math.floor(Math.random() * 100) + 1;
 
+// Utilizado const para variables que no cambian y let para las que cambian
 const intento = document.querySelector("#intento");
 const boton = document.querySelector("#probar");
 const nuevaProfecia = document.querySelector("#nueva-profecia");
@@ -9,6 +10,7 @@ const historial = document.querySelector("#historial");
 let intentos = 0;
 let intentosRealizados = [];
 
+// Utilizado addEventListener para clicks en app y no en html. Utilizado textContent para cambiar contenido.
 boton.addEventListener("click", () => {
 	const numeroRecibido = Number(intento.value);
 
@@ -31,7 +33,7 @@ boton.addEventListener("click", () => {
 		respuesta.textContent = "Mi número es menor";
 	}
 });
-
+// metodo para reiniciar el juego y generar un nuevo número secreto
 nuevaProfecia.addEventListener("click", () => {
 	secreto = Math.floor(Math.random() * 100) + 1;
 	intentos = 0;
