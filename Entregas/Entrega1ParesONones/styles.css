@@ -1,0 +1,189 @@
+:root {
+	color-scheme: light;
+	--ink: #17221d;
+	--muted: #66736b;
+	--paper: #f4f0e8;
+	--panel: #fffdf8;
+	--green: #245c4a;
+	--green-dark: #173e32;
+	--line: #d9d4c8;
+	--accent: #e5a344;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: radial-gradient(circle at 20% 10%, #dce7d6 0, transparent 32%), var(--paper);
+	color: var(--ink);
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+.juego {
+	width: min(100% - 40px, 680px);
+	margin: 0 auto;
+	padding: 72px 0 56px;
+}
+
+.cabecera {
+	margin-bottom: 32px;
+}
+
+.etiqueta {
+	margin: 0 0 12px;
+	color: var(--green);
+	font-family: Arial, sans-serif;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+	margin-top: 0;
+}
+
+h1 {
+	margin-bottom: 12px;
+	font-size: clamp(3rem, 9vw, 5.5rem);
+	font-weight: 400;
+	line-height: 0.95;
+}
+
+h2 {
+	margin-bottom: 24px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.descripcion,
+.reglas {
+	max-width: 520px;
+	color: var(--muted);
+	font-size: 1.1rem;
+	line-height: 1.55;
+}
+
+.panel {
+	padding: 28px;
+	border: 1px solid var(--line);
+	border-top: 5px solid var(--green);
+	background: var(--panel);
+	box-shadow: 12px 12px 0 rgba(36, 92, 74, 0.1);
+}
+
+.saldo {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 38px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid var(--line);
+	font-family: Arial, sans-serif;
+}
+
+.saldo span,
+label {
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+.saldo strong {
+	color: var(--green-dark);
+	font-size: 1.5rem;
+}
+
+label {
+	display: block;
+	margin: 20px 0 8px;
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+}
+
+.campo-dinero {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid var(--ink);
+}
+
+input,
+select {
+	width: 100%;
+	padding: 12px 0;
+	border: 0;
+	background: transparent;
+	color: var(--ink);
+	font: inherit;
+	font-size: 1.2rem;
+	outline: none;
+}
+
+.campo-dinero span {
+	color: var(--muted);
+	font-size: 1.2rem;
+}
+
+select {
+	padding: 12px;
+	border: 1px solid var(--line);
+	font-family: Arial, sans-serif;
+}
+
+button {
+	width: 100%;
+	margin-top: 14px;
+	padding: 14px 18px;
+	border: 0;
+	background: var(--green);
+	color: #fffdf8;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	font-size: 0.95rem;
+	font-weight: 700;
+}
+
+button:hover:not(:disabled) {
+	background: var(--green-dark);
+}
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.45;
+}
+
+#mensaje {
+	min-height: 48px;
+	margin: 26px 0 0;
+	padding: 14px;
+	background: #f1eadb;
+	color: var(--green-dark);
+	font-size: 1rem;
+	line-height: 1.45;
+}
+
+.reglas {
+	margin: 30px 0 0;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+	.juego {
+		width: min(100% - 28px, 680px);
+		padding-top: 42px;
+	}
+
+	.panel {
+		padding: 20px;
+	}
+
+	.saldo {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}

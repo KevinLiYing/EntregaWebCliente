@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pares o nones</title>
+	<link rel="stylesheet" href="styles.css" />
+	<script src="app.js" defer></script>
+</head>
+
+<body>
+	<main class="juego">
+		<section class="cabecera">
+			<p class="etiqueta">Juego de azar</p>
+			<h1>Pares o nones</h1>
+			<p class="descripcion">Elige una apuesta, decide si el resultado será par o nones y comprueba tu suerte.</p>
+		</section>
+
+		<section class="panel" aria-labelledby="titulo-partida">
+			<div class="saldo">
+				<span>Dinero disponible</span>
+				<strong id="saldo">500,00 €</strong>
+			</div>
+
+			<h2 id="titulo-partida">Prepara tu jugada</h2>
+
+			<label for="apuesta">Cantidad que quieres apostar</label>
+			<div class="campo-dinero">
+				<input id="apuesta" type="number" min="1" step="0.01" placeholder="0,00" />
+				<span>€</span>
+			</div>
+			<button id="confirmar-apuesta" type="button">Confirmar apuesta</button>
+
+			<label for="eleccion">¿Pares o nones?</label>
+			<select id="eleccion">
+				<option value="pares">Pares</option>
+				<option value="nones">Nones</option>
+			</select>
+			<button id="jugar" type="button">Elegir pares o nones</button>
+
+			<p id="mensaje" role="status">Confirma una apuesta para empezar.</p>
+		</section>
+
+		<p class="reglas">En cada ronda, tú y la casa sacáis un número del 0 al 5. Si la suma coincide con tu elección, ganas el doble de tu apuesta.</p>
+	</main>
+</body>
+
+</html>
