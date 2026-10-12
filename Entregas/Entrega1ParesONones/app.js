@@ -22,7 +22,8 @@ confirmarApuesta.addEventListener("click", () => {
 		return;
 	}
 
-    // esta no es una validación incorrecta, es muy importante
+    // esta no es una validación incorrecta, es muy importante ya que queremos que el jugador pueda quedarse en
+	// negativo, pero no queremos que se recupere una vez ya no tenga dinero. La IA no tiene mentalidad tiburon ):
     if(saldoActual < -500){
             mensaje.textContent = "No te queda dinero para darnos.";
             return;
