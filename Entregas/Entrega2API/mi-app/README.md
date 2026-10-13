@@ -1,16 +1,19 @@
-# React + Vite
+# PokeAPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Misión M2
 
-Currently, two official plugins are available:
+## Cómo probarlo
+Dentro de mi-app utilizar 'npm run dev' para correr el servidor. Hacerle el click al enlace localhost y utilizar la página web. En la página web se verán los pokemos de kanto y hay un buscador en el que puedes buscar el que quieras. La página indica el tipo, nombre y puntos de estadísticas totales del pokemon.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Uso de IA 
+Utilice la IA para la estructura base del proyecto y para la implementación de la llamada fetch a la API.
+También lo he utilizado para el css.
 
-## React Compiler
+Ejemplo: Completame la estructura que debería tener el proyecto para coger información de pokemos de una PokeAPI.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+EJemplo Hazme la llamada fetch a la API y une todo el proyecto con esa llamada.
 
-## Expanding the ESLint configuration
+## Autopsia
+1. He separado las interfaces en varios componentes de la app en vez de implementarlo todo en la app.jsx. Así, todo tiene un comportamiento especifico y es más fácil de leer.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Al recorrer los Pokémon utilizo pokemon.id como key en vez de utilizar el índice del array como dictado en clase que debería ser.
