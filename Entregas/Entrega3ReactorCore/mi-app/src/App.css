@@ -94,6 +94,26 @@ h1 span {
   color: #777c6a;
 }
 
+.sort-control {
+  display: flex;
+  min-width: 180px;
+  flex-direction: column;
+  gap: 6px;
+  color: #a7aa98;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sort-control select {
+  padding: 13px 12px;
+  border: 1px solid #4c5140;
+  border-radius: 6px;
+  color: #f4f0e8;
+  background: #1a1c17;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

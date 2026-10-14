@@ -5,12 +5,13 @@ import { StatusMessage } from './components/StatusMessage'
 import { PokemonGrid } from './components/PokemonGrid'
 import { DataSummary } from './components/DataSummary'
 import { getPokemonCollection } from './services/pokeApi'
-import { filterPokemon, transformPokemonData } from './utils/pokemon'
+import { filterPokemon, sortPokemon, transformPokemonData } from './utils/pokemon'
 import './App.css'
 
 export function App() {
   const [pokemon, setPokemon] = useState([])
   const [query, setQuery] = useState('')
+  const [sortOrder, setSortOrder] = useState('original')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -46,6 +47,7 @@ export function App() {
   }, [])
 
   const visiblePokemon = filterPokemon(pokemon, query)
+  const sortedPokemon = sortPokemon(visiblePokemon, sortOrder)
 
   return (
     <main className="app-shell">
@@ -62,6 +64,14 @@ export function App() {
           label="Buscar Pokémon por nombre"
           placeholder="Busca por nombre..."
         />
+        <label className="sort-control">
+          <span>Ordenar por</span>
+          <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value)}>
+            <option value="original">Orden de Kanto</option>
+            <option value="stats-desc">Más estadísticas</option>
+            <option value="stats-asc">Menos estadísticas</option>
+          </select>
+        </label>
         <DataSummary pokemon={pokemon} visiblePokemon={visiblePokemon} />
       </section>
       {loading && (
@@ -80,7 +90,7 @@ export function App() {
       )}
       {!loading && !error && (
         <PokemonGrid
-          pokemon={visiblePokemon}
+          pokemon={sortedPokemon}
           query={query}
           numberLabel="N.º"
           statLabel="BP"
