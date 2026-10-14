@@ -64,9 +64,28 @@ export function App() {
         />
         <DataSummary pokemon={pokemon} visiblePokemon={visiblePokemon} />
       </section>
-      {loading && <StatusMessage type="loading" />}
-      {error && <StatusMessage type="error" message={error} />}
-      {!loading && !error && <PokemonGrid pokemon={visiblePokemon} query={query} />}
+      {loading && (
+        <StatusMessage
+          type="loading"
+          loadingTitle="Escaneando la región..."
+          loadingMessage="El event loop está consultando PokeAPI."
+        />
+      )}
+      {error && (
+        <StatusMessage
+          type="error"
+          message={error}
+          errorTitle="Señal perdida"
+        />
+      )}
+      {!loading && !error && (
+        <PokemonGrid
+          pokemon={visiblePokemon}
+          query={query}
+          numberLabel="N.º"
+          statLabel="BP"
+        />
+      )}
     </main>
   )
 }

@@ -1,9 +1,15 @@
-export function PokemonCard({ pokemon }) {
+export function PokemonCard({
+  pokemon,
+  numberLabel = 'N.º',
+  statLabel = 'BP',
+}) {
   return (
     <article className="pokemon-card">
       <div className="pokemon-card__top">
-        <span className="pokemon-card__number">N.º {String(pokemon.id).padStart(3, '0')}</span>
-        <span className="pokemon-card__number">{pokemon.statsTotal} BP</span>
+        <span className="pokemon-card__number">
+          {numberLabel} {String(pokemon.id).padStart(3, '0')}
+        </span>
+        <span className="pokemon-card__number">{pokemon.statsTotal} {statLabel}</span>
       </div>
       <div className="pokemon-card__image-wrap">
         {pokemon.image ? (
