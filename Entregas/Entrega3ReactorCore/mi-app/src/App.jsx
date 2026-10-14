@@ -49,7 +49,12 @@ export function App() {
 
   return (
     <main className="app-shell">
-      <Header />
+      <Header
+        eyebrow="M2 / Async Odyssey"
+        title="Radar"
+        highlight="Kanto"
+        mark="PK"
+      />
       <section className="control-panel" aria-label="Controles de la Pokédex">
         <SearchBar query={query} onQueryChange={setQuery} />
         <DataSummary pokemon={pokemon} visiblePokemon={visiblePokemon} />

@@ -1,6 +1,6 @@
 # PokeAPI
 
-Misión M2
+Misión M3
 
 ## Cómo probarlo
 Dentro de mi-app utilizar 'npm run dev' para correr el servidor. Hacerle el click al enlace localhost y utilizar la página web. En la página web se verán los pokemos de kanto y hay un buscador en el que puedes buscar el que quieras. La página indica el tipo, nombre y puntos de estadísticas totales del pokemon.

@@ -1,11 +1,11 @@
-export function Header() {
+export function Header({ eyebrow, title, highlight, mark }) {
   return (
     <header className="app-header">
       <div>
-        <p className="eyebrow">M2 / Async Odyssey</p>
-        <h1>Radar <span>Kanto</span></h1>
+        <p className="eyebrow">{eyebrow}</p>
+        <h1>{title} <span>{highlight}</span></h1>
       </div>
-      <div className="header-mark" aria-hidden="true">PK</div>
+      <div className="header-mark" aria-hidden="true">{mark}</div>
     </header>
   )
 }
