@@ -56,7 +56,12 @@ export function App() {
         mark="PK"
       />
       <section className="control-panel" aria-label="Controles de la Pokédex">
-        <SearchBar query={query} onQueryChange={setQuery} />
+        <SearchBar
+          query={query}
+          onQueryChange={setQuery}
+          label="Buscar Pokémon por nombre"
+          placeholder="Busca por nombre..."
+        />
         <DataSummary pokemon={pokemon} visiblePokemon={visiblePokemon} />
       </section>
       {loading && <StatusMessage type="loading" />}
