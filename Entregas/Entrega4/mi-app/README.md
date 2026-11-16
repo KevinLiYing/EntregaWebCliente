@@ -1,20 +1,18 @@
-# PokeAPI
+# Hook y Zod
 
-Misión M3
+Misión M4 de Web Development I.
 
 ## Cómo probarlo
-Dentro de mi-app utilizar 'npm run dev' para correr el servidor. Hacerle el click al enlace localhost y utilizar la página web. En la página web se verán los pokemos de kanto y hay un buscador en el que puedes buscar el que quieras. La página indica el tipo, nombre y puntos de estadísticas totales del pokemon.
+Aplicación React con un formulario de contacto validado mediante React Hook Form y Zod. Los contactos se cargan y registran mediante peticiones HTTP gestionadas con TanStack Query.
 
 ## Uso de IA 
-Utilice la IA para cambiar los componentes y añadir props a ellos.
-
-Ejemplo: Vamos a ir componente por componente añadiendo props
-
-Ejemplo: Enlazame los cambios de components a la app para poder probarlo.
+Proponer la estructura inicial de carpetas.
+Crear el esquema de validación con Zod.
+Configurar TanStack Query.
 
 ## Autopsia
-1. He separado las interfaces en varios componentes de la app en vez de implementarlo todo en la app.jsx. Así, todo tiene un comportamiento especifico y es más fácil de leer. Los componentes ahora tienen props para que sean más flexibles con su comportamiento y sea más fácil de modificar.
+Separé la aplicación en componentes, servicios, hooks y esquemas para que cada parte tenga una responsabilidad concreta.
 
-2. Al recorrer los Pokémon utilizo pokemon.id como key en vez de utilizar el índice del array como dictado en clase que debería ser.
+El esquema Zod es la única fuente de verdad para la validación. El formulario no gestiona manualmente las peticiones: utiliza el hook useContacts, que centraliza la consulta, la mutación y la invalidación de la caché.
 
-3. La estructura de carpetas tenemos los componentes que son los visuales de la página, el services que conseguirá los datos de la api y los utils que serán funciones para filtrar, ordenar o buscar.
+La alternativa descartada fue colocar toda la lógica en App.jsx. Habría sido más rápido inicialmente, pero dificultaría el mantenimiento y la reutilización del formulario y del listado.
